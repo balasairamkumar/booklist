@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>books.login.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>checkBooks</servlet-name>
+        <servlet-class>books.login.checkBooks</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getBook</servlet-name>
+        <servlet-class>books.login.getBook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>checkBooks</servlet-name>
+        <url-pattern>/checkBooks</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>Login.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>getBook</servlet-name>
+        <url-pattern>/getBook</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

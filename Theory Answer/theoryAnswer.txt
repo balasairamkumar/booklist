@@ -1,0 +1,21 @@
+State Management :
+
+State Management can be achieved using Session or cookies..
+
+In session , an object has to be created for HttpSession type..
+For that HttpSession object we can set name-value pair using setAttribute method of the object
+Later on in the other pages we can retrieve the HttpSession object with getSession(false)..
+
+here the parameter false that is sent to getSession ensures that if no session is active, no new session will
+be created..
+
+The second method to maintain session is by cookies..
+
+the user will create a new cookie and add a name value pair for that cookie..
+
+like Cookies myCookie = new Cookie("name","username");
+
+later this particular cookie can be sent to the next page by response.addCookie(myCookie);
+
+even if the user not enabled cookies the API container itself will create a JSESSIONID which can be 
+passed with URL by the method encodeURL("urlName")
